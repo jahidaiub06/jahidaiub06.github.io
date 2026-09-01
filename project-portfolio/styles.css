@@ -195,6 +195,13 @@ h2 {
   padding: 20px;
   border: 1px solid var(--line);
   background: #ffffff;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px -14px rgba(22, 33, 46, 0.24);
+  border-top-color: var(--accent);
 }
 
 .project-card {

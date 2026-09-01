@@ -458,8 +458,14 @@ h2 {
   display: grid;
   grid-template-columns: 72px minmax(190px, 0.32fr) minmax(0, 1fr);
   gap: 24px;
-  padding: 26px 0;
+  padding: 26px 16px;
+  margin: 0 -16px;
   border-bottom: 1px solid var(--line);
+  transition: background 180ms ease;
+}
+
+.entry:hover {
+  background: var(--soft);
 }
 
 .entry::before {
@@ -520,6 +526,14 @@ li + li {
   padding: 18px;
   background: #ffffff;
   border-top: 3px solid var(--accent);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 180ms ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px -14px rgba(22, 33, 46, 0.2);
+  border-color: var(--line-strong);
+  border-top-color: var(--accent);
 }
 
 .tile strong {
@@ -571,13 +585,14 @@ li + li {
   padding: 22px;
   background: #ffffff;
   border-top: 3px solid var(--accent);
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color 180ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 
 .project-card:hover {
   border-color: var(--line);
   border-top-color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px -14px rgba(22, 33, 46, 0.24);
 }
 
 .project-card.featured {
