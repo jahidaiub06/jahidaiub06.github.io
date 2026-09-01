@@ -345,41 +345,71 @@ h1 {
 
 .tab {
   appearance: none;
+  position: relative;
   display: grid;
   grid-template-columns: 34px 1fr;
   gap: 8px;
   align-items: center;
   width: 100%;
-  min-height: 44px;
+  min-height: 46px;
   border: 1px solid var(--line);
-  border-left: 3px solid transparent;
   border-radius: 0;
-  padding: 8px 10px 8px 8px;
+  padding: 8px 12px;
   background: var(--paper);
   color: var(--ink);
   cursor: pointer;
   text-align: left;
+  overflow: hidden;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.tab::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
 }
 
 .tab b {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 700;
+  transition: color 180ms ease;
 }
 
 .tab span {
   font-size: 0.9rem;
   font-weight: 600;
+  transition: color 180ms ease;
 }
 
-.tab:hover,
+.tab:hover {
+  border-color: var(--line-strong);
+  background: var(--accent-soft);
+  transform: translateX(3px);
+}
+
+.tab:hover::before {
+  transform: scaleY(0.55);
+}
+
 .tab[aria-selected="true"] {
   border-color: var(--line-strong);
-  border-left-color: var(--accent);
   background: var(--accent-soft);
 }
 
-.tab[aria-selected="true"] b {
+.tab[aria-selected="true"]::before {
+  transform: scaleY(1);
+}
+
+.tab[aria-selected="true"] b,
+.tab[aria-selected="true"] span {
   color: var(--accent);
 }
 
