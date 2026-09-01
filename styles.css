@@ -629,6 +629,10 @@ li + li {
   gap: 12px;
 }
 
+.design-figures.single {
+  grid-template-columns: minmax(0, 240px);
+}
+
 .design-figures figure {
   margin: 0;
   border: 1px solid var(--line);
