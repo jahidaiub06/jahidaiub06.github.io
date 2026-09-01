@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jahidul Islam - personal research website in multimodal AI, wearable sensing, networking, and cybersecurity."
+    />
+    <title>Jahidul Islam | Personal Research Website</title>
+    <link rel="stylesheet" href="styles.css?v=formal-1" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar" aria-label="Website header">
+        <a class="wordmark" href="#home">Jahidul Islam</a>
+      </header>
+
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker">MSc Computer Science | The University of Aizu</p>
+          <h1 id="hero-title">Jahidul Islam</h1>
+          <p class="role">
+            Research-focused computer scientist working across multimodal AI, wearable sensing, networking, and cybersecurity.
+          </p>
+          <p class="summary">
+            I build and study intelligent sensing systems, including tactile data gloves for sign language recognition, and I am preparing for PhD applications with active interests in secure networked systems and AI-driven cybersecurity.
+          </p>
+
+          <ul class="contact-grid" aria-label="Contact links">
+            <li>
+              <a href="mailto:zahid060347@gmail.com">
+                <span class="contact-icon"><img src="assets/icons/email.svg" alt="" /></span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">zahid060347@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+817085472226">
+                <span class="contact-icon"><img src="assets/icons/phone.svg" alt="" /></span>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+81 70-8547-2226</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/jahidul-islam-1a8349159" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><img src="assets/icons/linkedin.svg" alt="" /></span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">LinkedIn Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/jahidaiub06" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><img src="assets/icons/github.svg" alt="" /></span>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">GitHub Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="project-portfolio/">
+                <span class="contact-icon"><img src="assets/icons/portfolio.svg" alt="" /></span>
+                <span class="contact-label">Portfolio</span>
+                <span class="contact-value">Project Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://scholar.google.com/citations?user=vLUhU8wAAAAJ&amp;hl=en&amp;authuser=2" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><img src="assets/icons/google-scholar.svg" alt="" /></span>
+                <span class="contact-label">Scholar</span>
+                <span class="contact-value">Google Scholar Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.researchgate.net/profile/Jahidul-Islam-104?ev=hdr_xprf" target="_blank" rel="noreferrer">
+                <span class="contact-icon"><img src="assets/icons/researchgate.svg" alt="" /></span>
+                <span class="contact-label">ResearchGate</span>
+                <span class="contact-value">ResearchGate Profile</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="quick-actions">
+            <a class="action-button" href="JAHIDUL_ISLAM_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+            <button class="action-button" type="button" data-open-tab="publications">View Publications</button>
+          </div>
+
+          <div class="identity-grid" aria-label="Profile highlights">
+            <article class="identity-item">
+              <strong>MSc</strong>
+              <span>Computer Science researcher at The University of Aizu.</span>
+            </article>
+            <article class="identity-item">
+              <strong>3</strong>
+              <span>Peer-reviewed publications across AI, sensing, and applied systems.</span>
+            </article>
+            <article class="identity-item">
+              <strong>AI + Security</strong>
+              <span>Focus on sensors, networking, cybersecurity, and multimodal intelligence.</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="portrait-panel" aria-label="Research visual">
+          <figure class="portrait">
+            <img src="assets/profile-photo.jpg" alt="Portrait of Jahidul Islam" />
+          </figure>
+          <figcaption class="portrait-caption">
+            <span>Personal Website</span>
+            <span>2026</span>
+          </figcaption>
+        </aside>
+      </section>
+
+      <div class="content-layout">
+        <aside class="tabs" aria-label="Website sections">
+          <button class="tab" type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="true">
+            <b>01</b><span>Research</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-publications" aria-controls="publications" aria-selected="false">
+            <b>02</b><span>Publications</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-education" aria-controls="education" aria-selected="false">
+            <b>03</b><span>Education</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-experience" aria-controls="experience" aria-selected="false">
+            <b>04</b><span>Experience</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-projects" aria-controls="projects" aria-selected="false">
+            <b>05</b><span>Projects</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-skills" aria-controls="skills" aria-selected="false">
+            <b>06</b><span>Skills</span>
+          </button>
+          <button class="tab" type="button" role="tab" id="tab-contact" aria-controls="contact" aria-selected="false">
+            <b>07</b><span>Contact</span>
+          </button>
+        </aside>
+
+        <main>
+          <section class="panel active" id="research" role="tabpanel" aria-labelledby="tab-research">
+            <div class="section-head">
+              <h2>Research</h2>
+              <p class="section-note">PhD-facing research identity across multimodal AI, wearable sensors, networking, and cybersecurity.</p>
+            </div>
+
+            <div class="entry-list">
+              <article class="entry">
+                <h3>Current Thesis</h3>
+                <div class="entry-body">
+                  <p class="meta">The University of Aizu</p>
+                  <p>
+                    Sign language recognition using a tactile data glove equipped with pressure sensors, IMU data, and OptiTrack motion tracking.
+                  </p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>PhD Direction</h3>
+                <div class="entry-body">
+                  <p class="meta">Research goals</p>
+                  <p>
+                    I am preparing for PhD applications at the intersection of multimodal AI, wearable sensing, secure networked systems, and cybersecurity. My goal is to build intelligent systems that are accurate, deployable, and reliable in real-world sensing and communication environments.
+                  </p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>Upcoming Cybersecurity Work</h3>
+                <div class="entry-body">
+                  <p class="meta">Manuscripts in progress</p>
+                  <p>
+                    Two cybersecurity-related papers are currently in progress, extending my profile beyond sensor AI into secure systems and network-focused research.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="tile-grid">
+              <article class="tile"><strong>Deep Learning</strong><span>Model training, evaluation, time-series classification, and sensor data interpretation.</span></article>
+              <article class="tile"><strong>Wearable Sensors</strong><span>Tactile pressure sensors, IMU modules, ESP32-based acquisition, and calibration workflows.</span></article>
+              <article class="tile"><strong>Networking</strong><span>Computer communications, network systems evaluation, and applied troubleshooting.</span></article>
+              <article class="tile"><strong>Cybersecurity</strong><span>Security tools, penetration testing foundations, IoT security, and network defense interests.</span></article>
+            </div>
+          </section>
+
+          <section class="panel" id="publications" role="tabpanel" aria-labelledby="tab-publications">
+            <div class="section-head">
+              <h2>Publications</h2>
+              <p class="section-note">Recent peer-reviewed output from 2025.</p>
+            </div>
+
+            <div class="entry-list">
+              <article class="entry">
+                <h3>Static ASL Gesture Recognition</h3>
+                <div class="entry-body">
+                  <p class="meta">Islam, J., &amp; Alif, M. D. A. | IEEE QPAIN 2025</p>
+                  <p>An efficient deep learning model for static ASL gesture recognition in resource-constrained environments.</p>
+                  <p><a href="https://doi.org/10.1109/QPAIN66474.2025.11172129" target="_blank" rel="noreferrer">doi.org/10.1109/QPAIN66474.2025.11172129</a></p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>Peach Sugar Content Prediction</h3>
+                <div class="entry-body">
+                  <p class="meta">Watanabe, A., Islam, J., &amp; Jing, L. | IEEE GCCE 2025</p>
+                  <p>Enhanced nondestructive prediction of peach sugar content using hyperspectral imaging and convolutional neural networks.</p>
+                  <p><a href="https://doi.org/10.1109/GCCE65946.2025.11275303" target="_blank" rel="noreferrer">doi.org/10.1109/GCCE65946.2025.11275303</a></p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>Chest Compression Skill Evaluation</h3>
+                <div class="entry-body">
+                  <p class="meta">Watanabe, R., Islam, J., Zhu, X., Kaneko, E., Iseki, K., &amp; Jing, L. | Applied Sciences 2025</p>
+                  <p>Chest compression skill evaluation system using pose estimation and web-based application.</p>
+                  <p><a href="https://doi.org/10.3390/app15158252" target="_blank" rel="noreferrer">doi.org/10.3390/app15158252</a></p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="education" role="tabpanel" aria-labelledby="tab-education">
+            <div class="section-head">
+              <h2>Education</h2>
+              <p class="section-note">Academic background with institutional records and downloadable transcripts.</p>
+            </div>
+
+            <div class="entry-list">
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/u-aizu.svg" alt="The University of Aizu logo" /></span>The University of Aizu</h3>
+                <div class="entry-body">
+                  <p class="meta">Graduate School of Computer Science and Engineering | Oct 2024 - Present</p>
+                  <p>Research Assistant in Professor JING Lei's lab. Major in Computer Science and Engineering. CGPA: 3.90/4.00.</p>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/aiub.svg" alt="AIUB logo" /></span>American International University-Bangladesh</h3>
+                <div class="entry-body">
+                  <p class="meta">BSc in Computer Science and Engineering | May 2017 - Mar 2023</p>
+                  <p>CGPA: 3.33/4.00. Undergraduate thesis: Phishing Attack Detecting System.</p>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/dhaka-college.png" alt="Dhaka College logo" /></span>Dhaka College</h3>
+                <div class="entry-body">
+                  <p class="meta">Higher Secondary School Certificate | Jul 2013 - Aug 2015</p>
+                  <p>Science group, Dhaka Board. GPA: 5.00.</p>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/homna-govt-high-school.jpg" alt="Homna Government High School logo" /></span>Homna Government High School</h3>
+                <div class="entry-body">
+                  <p class="meta">Secondary School Certificate | Jan 2011 - May 2013</p>
+                  <p>Science group, Cumilla Board. GPA: 5.00.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="experience" role="tabpanel" aria-labelledby="tab-experience">
+            <div class="section-head">
+              <h2>Experience</h2>
+              <p class="section-note">Research, teaching, and internship experience relevant to PhD applications.</p>
+            </div>
+
+            <div class="entry-list">
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/elite-lab.png" alt="ELITE Lab logo" /></span>Research Intern</h3>
+                <div class="entry-body">
+                  <p class="meta">ELITE Lab | Jan 2025 - Present | <a href="https://elitelab.ai/" target="_blank" rel="noreferrer">elitelab.ai</a></p>
+                  <ul>
+                    <li>Contributing to AI research activities with a focus on explainable and interpretable systems.</li>
+                    <li>Preparing cybersecurity-focused research papers and supporting publication workflows.</li>
+                    <li>Building research experience aligned with PhD applications in AI, networking, and cybersecurity.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/u-aizu.svg" alt="The University of Aizu logo" /></span>Teaching Assistant</h3>
+                <div class="entry-body">
+                  <p class="meta">The University of Aizu | Sep 2024 - Present</p>
+                  <ul>
+                    <li><strong>C Course (Apr 1, 2025 - Jun 10, 2026):</strong> Assisted students with C programming lab work, coding exercises, and assignments.</li>
+                    <li><strong>Introduction to Computer Networks:</strong> Lab assistant for network setup demonstrations and assignments.</li>
+                    <li><strong>Operating Systems:</strong> Guided students through process management, memory handling, and practical tasks.</li>
+                    <li><strong>Data Structures and Algorithms:</strong> Helped with coding exercises, basic algorithms, and problem-solving.</li>
+                    <li><strong>Artificial Intelligence:</strong> Assisted coding exercises, quizzes, report evaluation, and grading.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/u-aizu.svg" alt="The University of Aizu logo" /></span>Research Student</h3>
+                <div class="entry-body">
+                  <p class="meta">The University of Aizu | Apr 2024 - Sep 2024</p>
+                  <p>Engaged in research activities at the Faculty of Computer Science and Engineering and developed practical knowledge in advanced computer science methodologies.</p>
+                </div>
+              </article>
+              <article class="entry logo-entry">
+                <h3><span class="logo-box"><img src="assets/logos/aiub.svg" alt="AIUB logo" /></span>Teaching Assistant Intern</h3>
+                <div class="entry-body">
+                  <p class="meta">AIUB | Jan 2022 - Apr 2022</p>
+                  <ul>
+                    <li>Assisted Object-Oriented Programming labs using Java.</li>
+                    <li>Resolved software and database issues and reported lab equipment improvements.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="projects" role="tabpanel" aria-labelledby="tab-projects">
+            <div class="section-head">
+              <h2>Projects</h2>
+              <p class="section-note">Selected projects across research prototypes, cybersecurity, and software systems.</p>
+            </div>
+
+            <div class="project-grid">
+              <article class="project-card featured">
+                <div>
+                  <span class="project-number">01</span>
+                  <h3>Hysteresis Analysis of Piezoresistive Pressure Sensors</h3>
+                  <p>Master thesis work comparing deep learning accuracy using hysteresis-derived sensor features versus raw sensor data for dynamic sign language recognition.</p>
+                </div>
+                <ul class="tag-list">
+                  <li>Deep Learning</li>
+                  <li>Pressure Sensors</li>
+                  <li>Time-Series</li>
+                  <li>Sign Language</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <span class="project-number">02</span>
+                <h3>Globeride Data Glove</h3>
+                <p>Designed a data glove, tested it using IMADA, calibrated sensors, and prepared real-time raw sensor data collection workflows.</p>
+                <ul class="tag-list"><li>ESP32</li><li>IMU</li><li>Sensor Calibration</li></ul>
+              </article>
+              <article class="project-card">
+                <span class="project-number">03</span>
+                <h3>Phishing Attack Detecting System</h3>
+                <p>Undergraduate thesis prototype focused on phishing attack detection for safer browsing and future secure-system development.</p>
+                <ul class="tag-list"><li>Cybersecurity</li><li>Threat Detection</li><li>Secure Browsing</li></ul>
+              </article>
+              <article class="project-card">
+                <span class="project-number">04</span>
+                <h3>Management Systems</h3>
+                <p>Built Superstore, Study Assist, Bookshop, and Restaurant Management projects using database, OOP, and reporting concepts.</p>
+                <ul class="tag-list"><li>Java</li><li>C#</li><li>SQL</li></ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="skills" role="tabpanel" aria-labelledby="tab-skills">
+            <div class="section-head">
+              <h2>Skills</h2>
+              <p class="section-note">Technical capabilities organized by research and engineering area.</p>
+            </div>
+
+            <dl class="skill-list">
+              <dt>Programming</dt>
+              <dd>Python, C++, Java, C#</dd>
+              <dt>Deep Learning</dt>
+              <dd>TensorFlow, model training and evaluation, time-series classification</dd>
+              <dt>Embedded Sensing</dt>
+              <dd>ESP32, tactile and pressure sensors, IMU sensors, flex sensors, readout circuits</dd>
+              <dt>Motion and Vision</dt>
+              <dd>OptiTrack Motive, pose estimation, image recognition workflows</dd>
+              <dt>Fabrication</dt>
+              <dd>3D printing, Bambu Studio, PE-DESIGN 11, conductive-thread tactile sensor fabrication</dd>
+              <dt>Web, Data, Security</dt>
+              <dd>HTML, CSS, JavaScript, PHP, MySQL, SQL, Oracle, Kali Linux, VirtualBox, Wireshark</dd>
+            </dl>
+          </section>
+
+          <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
+            <div class="section-head">
+              <h2>Contact</h2>
+              <p class="section-note">Available for PhD admissions conversations, research collaboration, and technical opportunities.</p>
+            </div>
+
+            <div class="entry-list">
+              <article class="entry">
+                <h3>Direct Contact</h3>
+                <div class="entry-body">
+                  <p>Email: <a href="mailto:zahid060347@gmail.com">zahid060347@gmail.com</a></p>
+                  <p>Phone: <a href="tel:+817085472226">+81 70-8547-2226</a></p>
+                  <p>Location: Aizu Wakamatsu, Fukushima, Japan</p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>Profiles</h3>
+                <div class="entry-body">
+                  <p><a href="https://www.linkedin.com/in/jahidul-islam-1a8349159" target="_blank" rel="noreferrer">LinkedIn</a></p>
+                  <p><a href="https://github.com/jahidaiub06" target="_blank" rel="noreferrer">GitHub</a></p>
+                  <p><a href="project-portfolio/">Project Portfolio</a></p>
+                  <p><a href="https://scholar.google.com/citations?user=vLUhU8wAAAAJ&amp;hl=en&amp;authuser=2" target="_blank" rel="noreferrer">Google Scholar</a></p>
+                  <p><a href="https://www.researchgate.net/profile/Jahidul-Islam-104?ev=hdr_xprf" target="_blank" rel="noreferrer">ResearchGate</a></p>
+                </div>
+              </article>
+              <article class="entry">
+                <h3>References</h3>
+                <div class="entry-body">
+                  <p>Dr. Jing Lei, The University of Aizu | <a href="mailto:leijing@u-aizu.ac.jp">leijing@u-aizu.ac.jp</a></p>
+                  <p>Dr. Dip Nandi, AIUB | <a href="mailto:dip.nandi@aiub.edu">dip.nandi@aiub.edu</a></p>
+                  <p>Abhijit Bhowmik, AIUB | <a href="mailto:abhijit@aiub.edu">abhijit@aiub.edu</a></p>
+                  <p>Dr. M. M. Manjurul Islam, Ulster University | <a href="mailto:m.islam@ulster.ac.uk">m.islam@ulster.ac.uk</a></p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; <span data-year></span> Jahidul Islam. Personal research website.</p>
+        <a href="#home">Back to top</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
