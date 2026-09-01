@@ -623,6 +623,40 @@ li + li {
   line-height: 1.08;
 }
 
+.design-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.design-figures figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: 10px 10px 8px;
+}
+
+.design-figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.design-figures figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.design-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
