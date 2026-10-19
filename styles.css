@@ -953,3 +953,12 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .network-background { opacity: 0.28; }
 }
+
+
+.role .phd-highlight {
+  display: inline-block;
+  color: #8ee9e2;
+  font-size: 1.18em;
+  font-weight: 800;
+  text-transform: capitalize;
+}
