@@ -73,11 +73,11 @@ if (networkCanvas) {
     networkCanvas.width = Math.round(networkWidth * ratio);
     networkCanvas.height = Math.round(networkHeight * ratio);
     networkContext.setTransform(ratio, 0, 0, ratio, 0, 0);
-    const pointCount = Math.min(58, Math.max(24, Math.round((networkWidth * networkHeight) / 22000)));
+    const pointCount = Math.min(96, Math.max(34, Math.round((networkWidth * networkHeight) / 15000)));
     networkPoints = Array.from({ length: pointCount }, () => ({
       x: Math.random() * networkWidth,
       y: Math.random() * networkHeight,
-      vx: (Math.random() - 0.5) * 0.22,
+      vx: (Math.random() - 0.5) * 0.34,
       vy: (Math.random() - 0.5) * 0.22,
       warm: Math.random() > 0.82
     }));
@@ -98,20 +98,20 @@ if (networkCanvas) {
         const dx = point.x - other.x;
         const dy = point.y - other.y;
         const distance = Math.hypot(dx, dy);
-        if (distance < 170) {
+        if (distance < 230) {
           networkContext.beginPath();
           networkContext.moveTo(point.x, point.y);
           networkContext.lineTo(other.x, other.y);
-          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 170) * 0.22})`;
-          networkContext.lineWidth = 1;
+          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 230) * 0.34})`;
+          networkContext.lineWidth = 1.25;
           networkContext.stroke();
         }
       }
       networkContext.beginPath();
-      networkContext.arc(point.x, point.y, point.warm ? 2.1 : 1.8, 0, Math.PI * 2);
+      networkContext.arc(point.x, point.y, point.warm ? 5.2 : 4.3, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
       networkContext.shadowColor = point.warm ? "rgba(244, 190, 91, 0.55)" : "rgba(79, 213, 230, 0.60)";
-      networkContext.shadowBlur = 12;
+      networkContext.shadowBlur = point.warm ? 26 : 20;
       networkContext.fill();
     }
     networkContext.shadowBlur = 0;
