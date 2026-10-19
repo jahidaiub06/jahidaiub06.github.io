@@ -68,8 +68,8 @@ if (networkCanvas) {
 
   function resizeNetworkCanvas() {
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    networkWidth = window.innerWidth;
-    networkHeight = window.innerHeight;
+    networkWidth = networkCanvas.parentElement.clientWidth;
+    networkHeight = networkCanvas.parentElement.clientHeight;
     networkCanvas.width = Math.round(networkWidth * ratio);
     networkCanvas.height = Math.round(networkHeight * ratio);
     networkContext.setTransform(ratio, 0, 0, ratio, 0, 0);
