@@ -1,14 +1,14 @@
 :root {
-  --paper: #ffffff;
-  --ink: #16212e;
-  --muted: rgba(22, 33, 46, 0.64);
-  --line: rgba(22, 33, 46, 0.16);
-  --line-strong: #16212e;
-  --soft: rgba(22, 33, 46, 0.045);
-  --link: #1c3f6e;
-  --accent: #22436a;
-  --accent-soft: #eef2f7;
-  --accent-line: rgba(34, 67, 106, 0.28);
+  --paper: #08121d;
+  --ink: #e7f1fa;
+  --muted: rgba(215, 230, 244, 0.70);
+  --line: rgba(133, 165, 190, 0.18);
+  --line-strong: #26394b;
+  --soft: rgba(220, 240, 255, 0.04);
+  --link: #74d7ed;
+  --accent: #67ded8;
+  --accent-soft: rgba(19, 43, 58, 0.82);
+  --accent-line: rgba(103, 222, 216, 0.30);
   /* Legacy accent tokens unified to the formal navy palette */
   --cyan: #22436a;
   --blue: #22436a;
@@ -819,4 +819,107 @@ li + li {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+
+/* Dark research theme */
+body {
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(21, 75, 91, 0.22), transparent 35%),
+    radial-gradient(ellipse at 88% 70%, rgba(20, 69, 75, 0.16), transparent 34%),
+    #07101a;
+}
+.topbar {
+  top: 12px;
+  min-height: 54px;
+  margin-top: 12px;
+  padding: 0 18px;
+  border: 1px solid rgba(137, 175, 199, 0.20);
+  border-radius: 999px;
+  background: rgba(8, 18, 29, 0.88);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+}
+.wordmark { color: var(--ink); }
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 24px;
+  border: 1px solid rgba(111, 174, 197, 0.28);
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 52px);
+  background:
+    linear-gradient(110deg, rgba(9, 22, 35, 0.93), rgba(7, 15, 25, 0.86)),
+    radial-gradient(circle at 20% 30%, rgba(27, 105, 119, 0.24), transparent 40%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 560'%3E%3Cg fill='none' stroke='%2365ddeb' stroke-opacity='.25' stroke-width='1'%3E%3Cpath d='M80 150L210 240L340 180L470 310L620 190L800 270M210 240L170 430L340 180L370 430L470 310L620 400L800 270M340 180L370 70L620 190L660 80M470 310L590 500L620 400L800 270'/%3E%3C/g%3E%3Cg fill='%2371e5df'%3E%3Ccircle cx='80' cy='150' r='4'/%3E%3Ccircle cx='210' cy='240' r='4'/%3E%3Ccircle cx='340' cy='180' r='4'/%3E%3Ccircle cx='470' cy='310' r='4'/%3E%3Ccircle cx='620' cy='190' r='4'/%3E%3Ccircle cx='800' cy='270' r='4'/%3E%3Ccircle cx='170' cy='430' r='3'/%3E%3Ccircle cx='370' cy='430' r='3'/%3E%3Ccircle cx='590' cy='500' r='3'/%3E%3Ccircle cx='660' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(90deg, black, transparent 94%);
+}
+.portrait-panel,
+.contact-grid a,
+.identity-item,
+.tile,
+.logo-box,
+.project-card,
+.design-figures figure {
+  background-color: rgba(12, 25, 38, 0.88);
+  color: var(--ink);
+}
+.portrait-panel,
+.identity-grid,
+.contact-grid a,
+.logo-box,
+.project-card,
+.design-figures figure,
+.entry,
+.tab {
+  border-color: rgba(133, 165, 190, 0.20);
+}
+.portrait-panel,
+.identity-grid { border-radius: 20px; overflow: hidden; }
+.portrait { border-radius: 19px 19px 0 0; }
+.contact-grid a,
+.tab,
+.action-button,
+.tile,
+.project-card,
+.logo-box,
+.design-figures figure { border-radius: 14px; }
+.identity-grid { background: rgba(133, 165, 190, 0.18); }
+.entry:hover,
+.contact-grid a:hover,
+.tab:hover,
+.tab[aria-selected="true"] {
+  background-color: rgba(24, 47, 62, 0.88);
+}
+.action-button { color: var(--ink); }
+.action-button:first-child { color: #07101a; }
+.action-button:first-child:hover,
+.action-button:first-child:focus-visible { color: #07101a; }
+.tabs {
+  padding: 10px;
+  border: 1px solid rgba(133, 165, 190, 0.16);
+  border-radius: 18px;
+  background: rgba(8, 18, 29, 0.72);
+}
+.tab { background: rgba(13, 27, 40, 0.84); color: var(--ink); }
+.tab b { color: var(--muted); }
+.project-card.featured { background: rgba(17, 38, 52, 0.90); }
+.tag-list li { color: #8ee9e2; }
+.site-footer { border-color: rgba(133, 165, 190, 0.28); }
+@media (max-width: 1040px) {
+  .hero { padding: 28px; }
+}
+@media (max-width: 760px) {
+  .topbar { border-radius: 18px; }
+  .hero { padding: 22px; border-radius: 20px; }
 }
