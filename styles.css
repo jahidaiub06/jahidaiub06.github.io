@@ -957,8 +957,9 @@ body {
 
 .role .phd-highlight {
   display: inline-block;
+  margin: 0.08em 0;
   color: #8ee9e2;
-  font-size: 1.18em;
+  font-size: 1.35em;
   font-weight: 800;
-  text-transform: capitalize;
+  line-height: 1.15;
 }
