@@ -849,7 +849,7 @@ body {
   border-radius: 28px;
   padding: clamp(28px, 5vw, 52px);
   background:
-    linear-gradient(110deg, rgba(9, 22, 35, 0.55), rgba(7, 15, 25, 0.50)),
+    linear-gradient(110deg, rgba(9, 22, 35, 0.93), rgba(7, 15, 25, 0.86)),
     radial-gradient(circle at 20% 30%, rgba(27, 105, 119, 0.24), transparent 40%);
 }
 .hero::before {
@@ -925,7 +925,7 @@ body {
 }
 
 
-.network-background {
+ .network-background {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -933,6 +933,16 @@ body {
   height: 100%;
   pointer-events: none;
   opacity: 0.94;
+}
+.hero > .network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.94;
+}
+.hero > *:not(.network-background) {
+  position: relative;
+  z-index: 1;
 }
 .shell,
 .page {
