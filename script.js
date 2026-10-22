@@ -112,16 +112,16 @@ if (networkCanvas) {
           networkContext.beginPath();
           networkContext.moveTo(point.x, point.y);
           networkContext.lineTo(other.x, other.y);
-          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.18})`;
-          networkContext.lineWidth = 0.85;
+          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.22})`;
+          networkContext.lineWidth = 0.9;
           networkContext.stroke();
         }
       }
       networkContext.beginPath();
-      networkContext.arc(point.x, point.y, point.warm ? 3.8 : 2.8, 0, Math.PI * 2);
+      networkContext.arc(point.x, point.y, point.warm ? 4.4 : 3.3, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
       networkContext.shadowColor = point.warm ? "rgba(244, 190, 91, 0.55)" : "rgba(79, 213, 230, 0.60)";
-      networkContext.shadowBlur = point.warm ? 21 : 16;
+      networkContext.shadowBlur = point.warm ? 24 : 19;
       networkContext.fill();
     }
     networkContext.shadowBlur = 0;
