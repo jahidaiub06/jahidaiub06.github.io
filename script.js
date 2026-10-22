@@ -118,7 +118,7 @@ if (networkCanvas) {
         }
       }
       networkContext.beginPath();
-      networkContext.arc(point.x, point.y, point.warm ? 8.5 : 6.5, 0, Math.PI * 2);
+      networkContext.arc(point.x, point.y, point.warm ? 7.5 : 5.8, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
       networkContext.shadowColor = point.warm ? "rgba(244, 190, 91, 0.55)" : "rgba(79, 213, 230, 0.60)";
       networkContext.shadowBlur = point.warm ? 38 : 30;
