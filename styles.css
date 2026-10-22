@@ -164,7 +164,7 @@ h1 {
 
 .contact-grid a {
   display: grid;
-  grid-template-columns: 42px minmax(0, 104px) minmax(0, 1fr);
+  grid-template-columns: 42px minmax(0, 94px) minmax(0, 1fr);
   gap: 10px;
   align-items: center;
   min-height: 50px;
@@ -201,7 +201,7 @@ h1 {
 
 .contact-label {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -212,6 +212,7 @@ h1 {
 
 .contact-value {
   min-width: 0;
+  font-size: 0.9rem;
   color: var(--link);
   overflow-wrap: anywhere;
 }
@@ -767,7 +768,7 @@ li + li {
   }
 
   .contact-grid a {
-    grid-template-columns: 42px minmax(0, 100px) minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 94px) minmax(0, 1fr);
   }
 
   .section-note {
