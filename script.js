@@ -112,8 +112,8 @@ if (networkCanvas) {
           networkContext.beginPath();
           networkContext.moveTo(point.x, point.y);
           networkContext.lineTo(other.x, other.y);
-          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.22})`;
-          networkContext.lineWidth = 0.9;
+          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.28})`;
+          networkContext.lineWidth = 1;
           networkContext.stroke();
         }
       }
