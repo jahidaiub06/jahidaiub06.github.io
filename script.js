@@ -74,25 +74,35 @@ if (networkCanvas) {
     networkCanvas.height = Math.round(networkHeight * ratio);
     networkContext.setTransform(ratio, 0, 0, ratio, 0, 0);
     const pointCount = Math.min(48, Math.max(20, Math.round((networkWidth * networkHeight) / 32000)));
-    networkPoints = Array.from({ length: pointCount }, () => ({
-      x: Math.random() * networkWidth,
-      y: Math.random() * networkHeight,
-      vx: (Math.random() - 0.5) * 0.34,
-      vy: (Math.random() - 0.5) * 0.22,
-      warm: Math.random() > 0.82
-    }));
+    networkPoints = Array.from({ length: pointCount }, () => {
+      const driftX = 10 + Math.random() * 16;
+      const driftY = 7 + Math.random() * 11;
+      return {
+        originX: driftX + Math.random() * Math.max(0, networkWidth - driftX * 2),
+        originY: driftY + Math.random() * Math.max(0, networkHeight - driftY * 2),
+        x: 0,
+        y: 0,
+        driftX,
+        driftY,
+        phaseX: Math.random() * Math.PI * 2,
+        phaseY: Math.random() * Math.PI * 2,
+        speedX: 0.00016 + Math.random() * 0.00010,
+        speedY: 0.00014 + Math.random() * 0.00009,
+        warm: Math.random() > 0.82
+      };
+    });
   }
 
-  function drawNetwork() {
+  function drawNetwork(timestamp = 0) {
     networkContext.clearRect(0, 0, networkWidth, networkHeight);
     for (let i = 0; i < networkPoints.length; i += 1) {
       const point = networkPoints[i];
-      if (!reducedMotion) {
-        point.x += point.vx;
-        point.y += point.vy;
-        if (point.x < 0 || point.x > networkWidth) point.vx *= -1;
-        if (point.y < 0 || point.y > networkHeight) point.vy *= -1;
-      }
+      point.x = reducedMotion
+        ? point.originX
+        : point.originX + Math.sin(timestamp * point.speedX + point.phaseX) * point.driftX;
+      point.y = reducedMotion
+        ? point.originY
+        : point.originY + Math.sin(timestamp * point.speedY + point.phaseY) * point.driftY;
       for (let j = i + 1; j < networkPoints.length; j += 1) {
         const other = networkPoints[j];
         const dx = point.x - other.x;
@@ -102,16 +112,16 @@ if (networkCanvas) {
           networkContext.beginPath();
           networkContext.moveTo(point.x, point.y);
           networkContext.lineTo(other.x, other.y);
-          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.26})`;
-          networkContext.lineWidth = 1;
+          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.18})`;
+          networkContext.lineWidth = 0.85;
           networkContext.stroke();
         }
       }
       networkContext.beginPath();
-      networkContext.arc(point.x, point.y, point.warm ? 4.5 : 3.4, 0, Math.PI * 2);
+      networkContext.arc(point.x, point.y, point.warm ? 3.8 : 2.8, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
       networkContext.shadowColor = point.warm ? "rgba(244, 190, 91, 0.55)" : "rgba(79, 213, 230, 0.60)";
-      networkContext.shadowBlur = point.warm ? 22 : 16;
+      networkContext.shadowBlur = point.warm ? 21 : 16;
       networkContext.fill();
     }
     networkContext.shadowBlur = 0;
