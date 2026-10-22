@@ -86,8 +86,8 @@ if (networkCanvas) {
         driftY,
         phaseX: Math.random() * Math.PI * 2,
         phaseY: Math.random() * Math.PI * 2,
-        speedX: 0.00096 + Math.random() * 0.00060,
-        speedY: 0.00084 + Math.random() * 0.00054,
+        speedX: 0.0016 + Math.random() * 0.0008,
+        speedY: 0.0012 + Math.random() * 0.0006,
         warm: Math.random() > 0.82
       };
     });
@@ -118,10 +118,10 @@ if (networkCanvas) {
         }
       }
       networkContext.beginPath();
-      networkContext.arc(point.x, point.y, point.warm ? 6.8 : 5.2, 0, Math.PI * 2);
+      networkContext.arc(point.x, point.y, point.warm ? 8.5 : 6.5, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
       networkContext.shadowColor = point.warm ? "rgba(244, 190, 91, 0.55)" : "rgba(79, 213, 230, 0.60)";
-      networkContext.shadowBlur = point.warm ? 32 : 26;
+      networkContext.shadowBlur = point.warm ? 38 : 30;
       networkContext.fill();
     }
     networkContext.shadowBlur = 0;
