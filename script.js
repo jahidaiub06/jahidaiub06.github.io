@@ -86,8 +86,8 @@ if (networkCanvas) {
         driftY,
         phaseX: Math.random() * Math.PI * 2,
         phaseY: Math.random() * Math.PI * 2,
-        speedX: 0.00016 + Math.random() * 0.00010,
-        speedY: 0.00014 + Math.random() * 0.00009,
+        speedX: 0.00032 + Math.random() * 0.00020,
+        speedY: 0.00028 + Math.random() * 0.00018,
         warm: Math.random() > 0.82
       };
     });
