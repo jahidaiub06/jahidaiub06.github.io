@@ -1470,3 +1470,11 @@ body {
     width: 100%;
   }
 }
+
+
+.contact-list .contact-icon img,
+.profile-icon-row img {
+  width: 17px;
+  height: 17px;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(44%) saturate(720%) hue-rotate(139deg) brightness(101%) contrast(96%);
+}
