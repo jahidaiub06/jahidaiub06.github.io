@@ -1295,3 +1295,62 @@ body {
     grid-row: auto;
   }
 }
+
+
+.design-figures figure img {
+  cursor: zoom-in;
+}
+.design-figures figure img:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.image-lightbox {
+  position: relative;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  margin: auto;
+  padding: 42px 16px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: #0c1924;
+  color: var(--ink);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.55);
+}
+.image-lightbox::backdrop {
+  background: rgba(2, 8, 14, 0.84);
+  backdrop-filter: blur(5px);
+}
+.image-lightbox > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(86vw, 1100px);
+  max-height: 76vh;
+  margin: 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+.image-lightbox-caption {
+  margin: 10px 4px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.image-lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #132534;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+}
