@@ -1267,3 +1267,31 @@ body {
     height: 82px;
   }
 }
+
+/* Keep image-based projects compact on wider screens. */
+.project-card:has(.design-figures) {
+  grid-template-columns: minmax(0, 1fr) 148px;
+}
+.project-card:has(.design-figures) > .project-number,
+.project-card:has(.design-figures) > h3,
+.project-card:has(.design-figures) > p:not(.design-note) {
+  grid-column: 1;
+}
+.project-card:has(.design-figures) > .design-figures {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+}
+.project-card:has(.design-figures) > .design-note,
+.project-card:has(.design-figures) > .tag-list {
+  grid-column: 1 / -1;
+}
+@media (max-width: 760px) {
+  .project-card:has(.design-figures) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-card:has(.design-figures) > .design-figures {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
