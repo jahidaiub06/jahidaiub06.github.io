@@ -347,6 +347,7 @@ h1 {
 
 .tab {
   appearance: none;
+  text-decoration: none;
   position: relative;
   display: grid;
   grid-template-columns: 34px 1fr;
