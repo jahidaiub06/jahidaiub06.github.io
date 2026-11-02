@@ -157,3 +157,43 @@ if (networkCanvas) {
     drawNetwork();
   }, { passive: true });
 }
+
+
+// Open project design previews at full size when selected.
+const designImages = Array.from(document.querySelectorAll(".design-figures figure img"));
+if (designImages.length) {
+  const lightbox = document.createElement("dialog");
+  lightbox.className = "image-lightbox";
+  lightbox.setAttribute("aria-label", "Project image preview");
+  lightbox.innerHTML = '<button class="image-lightbox-close" type="button" aria-label="Close image preview">&times;</button><img alt=""><p class="image-lightbox-caption"></p>';
+  document.body.append(lightbox);
+
+  const previewImage = lightbox.querySelector("img");
+  const previewCaption = lightbox.querySelector(".image-lightbox-caption");
+  const closePreview = lightbox.querySelector(".image-lightbox-close");
+
+  function openImagePreview(image) {
+    previewImage.src = image.currentSrc || image.src;
+    previewImage.alt = image.alt;
+    previewCaption.textContent = image.closest("figure")?.querySelector("figcaption")?.textContent || image.alt;
+    lightbox.showModal();
+  }
+
+  designImages.forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Enlarge image: ${image.alt}`);
+    image.addEventListener("click", () => openImagePreview(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openImagePreview(image);
+      }
+    });
+  });
+
+  closePreview.addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+}
