@@ -1207,14 +1207,14 @@ body {
 .project-card {
   align-self: start;
   align-content: start;
-  gap: 12px;
+  gap: 10px;
   min-height: 0;
-  padding: 18px;
+  padding: 16px;
 }
 .project-card.featured {
   align-items: start;
   min-height: 0;
-  padding: 20px;
+  padding: 18px;
 }
 .project-card h3 {
   margin: 10px 0 8px;
@@ -1236,7 +1236,7 @@ body {
 }
 .design-figures img {
   width: 100%;
-  height: 180px;
+  height: 140px;
   object-fit: contain;
 }
 @media (max-width: 760px) {
@@ -1248,6 +1248,6 @@ body {
     font-size: 1.3rem;
   }
   .design-figures img {
-    height: 160px;
+    height: 120px;
   }
 }
