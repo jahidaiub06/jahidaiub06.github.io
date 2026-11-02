@@ -1251,3 +1251,19 @@ body {
     height: 120px;
   }
 }
+
+/* Reduce project design previews so image cards stay compact. */
+.design-figures.single {
+  grid-template-columns: minmax(0, 148px);
+}
+.design-figures img {
+  height: 96px;
+}
+.design-figures figure {
+  padding: 6px;
+}
+@media (max-width: 760px) {
+  .design-figures img {
+    height: 82px;
+  }
+}
