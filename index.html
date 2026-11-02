@@ -14,13 +14,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
     />
-    <link rel="stylesheet" href="styles.css?v=nav-4" />
+    <link rel="stylesheet" href="styles.css?v=nav-5" />
   </head>
   <body>
     <div class="shell">
       <aside class="tabs" aria-label="Website sections">
-        <a class="tab" href="#home"><b>00</b><span>Home</span></a>
-        <button class="tab" type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="true">
+        <a class="tab" href="#home" aria-current="page"><b>00</b><span>Home</span></a>
+        <button class="tab" type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="false">
           <b>01</b><span>Research</span>
         </button>
         <button class="tab" type="button" role="tab" id="tab-publications" aria-controls="publications" aria-selected="false">
@@ -149,7 +149,7 @@
       <div class="content-layout">
 
         <main>
-          <section class="panel active" id="research" role="tabpanel" aria-labelledby="tab-research">
+          <section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research">
             <div class="section-head">
               <h2>Research</h2>
               <p class="section-note">Research experience and interests in multimodal AI, wearable sensing, cybersecurity, and networked systems.</p>
@@ -465,6 +465,6 @@
       </footer>
     </div>
 
-    <script src="script.js?v=dots-3"></script>
+    <script src="script.js?v=dots-4"></script>
   </body>
 </html>
