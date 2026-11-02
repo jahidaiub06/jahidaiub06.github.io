@@ -1478,3 +1478,16 @@ body {
   height: 17px;
   filter: brightness(0) saturate(100%) invert(73%) sepia(44%) saturate(720%) hue-rotate(139deg) brightness(101%) contrast(96%);
 }
+
+
+/* Preserve brand colors for social and scholarly profile marks. */
+.contact-list .contact-icon img[src*="linkedin.svg"],
+.contact-list .contact-icon img[src*="google-scholar.svg"],
+.contact-list .contact-icon img[src*="researchgate.svg"],
+.contact-list .contact-icon img[src*="orcid.svg"],
+.profile-icon-row img[src*="linkedin.svg"],
+.profile-icon-row img[src*="google-scholar.svg"],
+.profile-icon-row img[src*="researchgate.svg"],
+.profile-icon-row img[src*="orcid.svg"] {
+  filter: none;
+}
