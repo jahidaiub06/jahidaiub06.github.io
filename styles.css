@@ -1197,3 +1197,57 @@ body {
     font-size: 0.74rem;
   }
 }
+
+
+/* Keep project cards compact and stop tall design images from stretching rows. */
+.project-grid {
+  align-items: start;
+  gap: 14px;
+}
+.project-card {
+  align-self: start;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+  padding: 18px;
+}
+.project-card.featured {
+  align-items: start;
+  min-height: 0;
+  padding: 20px;
+}
+.project-card h3 {
+  margin: 10px 0 8px;
+  font-size: clamp(1.4rem, 2.4vw, 2.3rem);
+}
+.project-card:not(.featured) h3 {
+  margin: 8px 0;
+  font-size: clamp(1.2rem, 1.65vw, 1.6rem);
+  line-height: 1.14;
+}
+.design-figures {
+  gap: 10px;
+}
+.design-figures.single {
+  grid-template-columns: minmax(0, 190px);
+}
+.design-figures figure {
+  padding: 8px;
+}
+.design-figures img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+@media (max-width: 760px) {
+  .project-card,
+  .project-card.featured {
+    padding: 16px;
+  }
+  .project-card:not(.featured) h3 {
+    font-size: 1.3rem;
+  }
+  .design-figures img {
+    height: 160px;
+  }
+}
