@@ -402,17 +402,21 @@ h1 {
   transform: scaleY(0.55);
 }
 
-.tab[aria-selected="true"] {
+.tab[aria-selected="true"],
+.tab[aria-current="page"] {
   border-color: var(--line-strong);
   background: var(--accent-soft);
 }
 
-.tab[aria-selected="true"]::before {
+.tab[aria-selected="true"]::before,
+.tab[aria-current="page"]::before {
   transform: scaleY(1);
 }
 
 .tab[aria-selected="true"] b,
-.tab[aria-selected="true"] span {
+.tab[aria-selected="true"] span,
+.tab[aria-current="page"] b,
+.tab[aria-current="page"] span {
   color: var(--accent);
 }
 
