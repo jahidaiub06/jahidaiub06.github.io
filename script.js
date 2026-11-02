@@ -1,5 +1,6 @@
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+const homeLink = document.querySelector('.tabs a[href="#home"]');
 const year = document.querySelector("[data-year]");
 
 if (year) {
@@ -9,6 +10,7 @@ if (year) {
 function activateTab(tab, shouldScroll = true) {
   if (!tab) return;
 
+  homeLink?.removeAttribute("aria-current");
   tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
   panels.forEach((panel) => {
     panel.classList.toggle("active", panel.id === tab.getAttribute("aria-controls"));
@@ -23,6 +25,22 @@ function activateTab(tab, shouldScroll = true) {
     document.querySelector(".content-layout")?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
 }
+
+function activateHome(shouldScroll = true) {
+  homeLink?.setAttribute("aria-current", "page");
+  tabs.forEach((tab) => tab.setAttribute("aria-selected", "false"));
+  panels.forEach((panel) => panel.classList.remove("active"));
+  history.replaceState(null, "", "#home");
+
+  if (shouldScroll) {
+    document.getElementById("home")?.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+}
+
+homeLink?.addEventListener("click", (event) => {
+  event.preventDefault();
+  activateHome();
+});
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => activateTab(tab));
@@ -52,7 +70,10 @@ document.querySelectorAll("[data-open-tab]").forEach((button) => {
 const initialPanel = window.location.hash.replace("#", "");
 if (initialPanel) {
   const initialTab = tabs.find((tab) => tab.getAttribute("aria-controls") === initialPanel);
-  activateTab(initialTab, false);
+  if (initialTab) activateTab(initialTab, false);
+  else activateHome(false);
+} else {
+  activateHome(false);
 }
 
 
