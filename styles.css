@@ -1934,3 +1934,32 @@ body {
     height: 118px;
   }
 }
+
+
+/* Reference-inspired identity watermark behind the homepage content. */
+.hero::after {
+  content: "JAHIDUL ISLAM";
+  position: absolute;
+  top: 30px;
+  left: 4%;
+  z-index: 0;
+  max-width: 76%;
+  pointer-events: none;
+  color: var(--ink);
+  opacity: 0.065;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: clamp(4.5rem, 9.5vw, 8rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.86;
+  white-space: normal;
+}
+
+@media (max-width: 760px) {
+  .hero::after {
+    top: 20px;
+    left: 22px;
+    max-width: 88%;
+    font-size: clamp(3.4rem, 15vw, 5.6rem);
+  }
+}
