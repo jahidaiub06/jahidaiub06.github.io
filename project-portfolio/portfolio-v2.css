@@ -443,8 +443,8 @@ body {
   border-color: rgba(199, 218, 231, 0.24);
 }
 .profile-card img {
-  transform: scale(1.7);
-  transform-origin: 50% 25%;
+  transform: scale(2.4);
+  transform-origin: 50% 40%;
 }
 .profile-card figcaption {
   background: rgba(39, 56, 71, 0.96);
