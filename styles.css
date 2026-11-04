@@ -2166,3 +2166,20 @@ body {
     width: 100%;
   }
 }
+
+
+/* Larger previews for the two pressure-sensor project photos. */
+.hysteresis-photos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 760px;
+  margin-top: 16px;
+}
+.hysteresis-photos img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+@media (max-width: 640px) {
+  .hysteresis-photos img { height: 230px; }
+}

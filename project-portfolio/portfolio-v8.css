@@ -604,3 +604,14 @@ body {
   object-position: center;
   transform: none;
 }
+
+
+/* Larger previews for the two pressure-sensor project photos. */
+.project-card.major .hysteresis-photos img {
+  height: 280px;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+@media (max-width: 680px) {
+  .project-card.major .hysteresis-photos img { height: 220px; }
+}
