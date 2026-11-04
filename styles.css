@@ -1911,3 +1911,22 @@ body {
 .experience-details li::marker {
   color: #91eee3;
 }
+
+
+/* Slightly enlarge the home portrait while keeping its text column balanced. */
+.profile-snapshot-top {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+.snapshot-photo {
+  width: 92px;
+  height: 108px;
+}
+@media (max-width: 760px) {
+  .profile-snapshot-top {
+    grid-template-columns: 86px minmax(0, 1fr);
+  }
+  .snapshot-photo {
+    width: 86px;
+    height: 100px;
+  }
+}
