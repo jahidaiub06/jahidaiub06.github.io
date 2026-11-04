@@ -1491,3 +1491,68 @@ body {
 .profile-icon-row img[src*="orcid.svg"] {
   filter: none;
 }
+
+
+.contact-columns {
+  display: grid;
+  grid-template-columns: minmax(300px, 500px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 56px);
+}
+.contact-main {
+  width: 100%;
+  min-width: 0;
+}
+.contact-main .contact-list,
+.contact-main .contact-profiles {
+  width: 100%;
+}
+.contact-references {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.32fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  padding: 18px 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.contact-references h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.contact-reference-body {
+  min-width: 0;
+}
+.contact-reference-body p {
+  margin: 0 0 12px;
+  color: var(--ink);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.contact-reference-body p:last-child {
+  margin-bottom: 0;
+}
+.contact-reference-body a {
+  color: var(--link);
+}
+@media (max-width: 980px) {
+  .contact-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .contact-main {
+    max-width: 500px;
+  }
+  .contact-references {
+    max-width: 760px;
+  }
+}
+@media (max-width: 600px) {
+  .contact-references {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px 4px;
+  }
+}
