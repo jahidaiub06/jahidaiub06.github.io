@@ -2000,3 +2000,97 @@ body {
     height: 130px;
   }
 }
+
+
+/* Skills section: categorized cards and compact capability tags. */
+.skills-panel .skills-heading {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+.skills-eyebrow {
+  margin: 0 0 7px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.skills-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+.skills-description {
+  max-width: 690px;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.skill-card {
+  min-width: 0;
+  min-height: 154px;
+  padding: 16px 15px;
+  border: 1px solid rgba(199, 218, 231, 0.15);
+  border-radius: 18px;
+  background: rgba(239, 246, 250, 0.045);
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(118, 221, 213, 0.42);
+  background: rgba(239, 246, 250, 0.065);
+}
+.skill-card h3 {
+  margin: 0 0 11px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.skill-tags li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 29px;
+  padding: 5px 10px;
+  border: 1px solid rgba(199, 218, 231, 0.13);
+  border-radius: 999px;
+  background: rgba(239, 246, 250, 0.055);
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+@media (max-width: 900px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .skills-panel .skills-heading {
+    margin-bottom: 19px;
+  }
+  .skill-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .skill-card {
+    min-height: 0;
+    padding: 15px 14px;
+    border-radius: 16px;
+  }
+}
