@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
     />
-    <link rel="stylesheet" href="styles.css?v=project-images-1" />
+    <link rel="stylesheet" href="styles.css?v=skills-cards-1" />
   </head>
   <body>
     <div class="shell">
@@ -407,26 +407,51 @@
             </div>
           </section>
 
-          <section class="panel" id="skills" role="tabpanel" aria-labelledby="tab-skills">
-            <div class="section-head">
-              <h2>Skills</h2>
-              <p class="section-note">Technical capabilities organized by research and engineering area.</p>
+          <section class="panel skills-panel" id="skills" role="tabpanel" aria-labelledby="tab-skills">
+            <div class="skills-heading">
+              <p class="skills-eyebrow">Skills</p>
+              <h2>Technical Stack and Research Capabilities</h2>
+              <p class="skills-description">A research-focused toolkit across AI, wearable sensing, motion analysis, software, and hands-on prototyping.</p>
             </div>
 
-            <dl class="skill-list">
-              <dt>Programming</dt>
-              <dd>Python, C++, Java, C#</dd>
-              <dt>Deep Learning</dt>
-              <dd>TensorFlow, model training and evaluation, time-series classification</dd>
-              <dt>Embedded Sensing</dt>
-              <dd>ESP32, tactile and pressure sensors, IMU sensors, flex sensors, readout circuits</dd>
-              <dt>Motion and Vision</dt>
-              <dd>OptiTrack Motive, pose estimation, image recognition workflows</dd>
-              <dt>Fabrication</dt>
-              <dd>3D printing, Bambu Studio, PE-DESIGN 11, conductive-thread tactile sensor fabrication</dd>
-              <dt>Web, Data, Security</dt>
-              <dd>HTML, CSS, JavaScript, PHP, MySQL, SQL, Oracle, Kali Linux, VirtualBox, Wireshark</dd>
-            </dl>
+            <div class="skill-grid">
+              <article class="skill-card">
+                <h3>AI and Learning</h3>
+                <ul class="skill-tags">
+                  <li>Deep Learning</li><li>TensorFlow</li><li>Time-Series Classification</li><li>Model Training and Evaluation</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3>Wearable Sensing</h3>
+                <ul class="skill-tags">
+                  <li>Tactile and Pressure Sensors</li><li>IMU Sensors</li><li>Flex Sensors</li><li>ESP32</li><li>Readout Circuits</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3>Motion and Vision</h3>
+                <ul class="skill-tags">
+                  <li>OptiTrack Motive</li><li>Pose Estimation</li><li>Image Recognition</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3>Programming and Web</h3>
+                <ul class="skill-tags">
+                  <li>Python</li><li>C++</li><li>Java</li><li>C#</li><li>JavaScript</li><li>HTML and CSS</li><li>PHP</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3>Data and Databases</h3>
+                <ul class="skill-tags">
+                  <li>MySQL</li><li>SQL</li><li>Oracle</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3>Security and Fabrication</h3>
+                <ul class="skill-tags">
+                  <li>Kali Linux</li><li>Wireshark</li><li>VirtualBox</li><li>3D Printing</li><li>Bambu Studio</li><li>PE-DESIGN 11</li><li>Conductive-Thread Sensor Fabrication</li>
+                </ul>
+              </article>
+            </div>
           </section>
 
           <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
