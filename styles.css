@@ -1679,3 +1679,9 @@ body {
     font-size: 0.78rem;
   }
 }
+
+
+/* Keep the University of Aizu mark legible against the dark education cards. */
+.education-logo {
+  background: #f4f8fa;
+}
