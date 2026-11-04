@@ -1913,24 +1913,24 @@ body {
 }
 
 
-/* Give the home portrait a larger, face-focused crop. */
+/* Make the home portrait more prominent with a face-centered crop. */
 .profile-snapshot-top {
-  grid-template-columns: 122px minmax(0, 1fr);
+  grid-template-columns: 132px minmax(0, 1fr);
 }
 .snapshot-photo {
-  width: 122px;
-  height: 144px;
+  width: 132px;
+  height: 156px;
 }
 .snapshot-photo img {
-  transform: scale(2);
-  transform-origin: 50% 50%;
+  transform: scale(3);
+  transform-origin: 44% 45%;
 }
 @media (max-width: 760px) {
   .profile-snapshot-top {
-    grid-template-columns: 108px minmax(0, 1fr);
+    grid-template-columns: 116px minmax(0, 1fr);
   }
   .snapshot-photo {
-    width: 108px;
-    height: 128px;
+    width: 116px;
+    height: 137px;
   }
 }
