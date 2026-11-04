@@ -2094,3 +2094,33 @@ body {
     border-radius: 16px;
   }
 }
+
+
+/* Strengthen the individual skill-card boxes to match the reference layout. */
+.skills-heading h2 {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.skill-card {
+  min-height: 184px;
+  padding: 18px 16px;
+  border: 1px solid rgba(199, 218, 231, 0.25);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(23, 38, 52, 0.92), rgba(33, 49, 64, 0.88));
+  box-shadow: 0 10px 24px rgba(9, 18, 27, 0.18), inset 0 1px 0 rgba(239, 246, 250, 0.035);
+}
+.skill-card:hover {
+  border-color: rgba(118, 221, 213, 0.52);
+  background: linear-gradient(145deg, rgba(25, 42, 57, 0.96), rgba(36, 54, 69, 0.92));
+}
+.skill-tags li {
+  border-color: rgba(199, 218, 231, 0.19);
+  background: rgba(239, 246, 250, 0.075);
+}
+@media (max-width: 600px) {
+  .skill-card {
+    min-height: 0;
+    padding: 17px 15px;
+  }
+}
