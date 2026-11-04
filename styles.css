@@ -1961,3 +1961,42 @@ body {
     font-size: clamp(2.4rem, 11vw, 4rem);
   }
 }
+
+
+/* Make the two wearable glove drawings readable in the Project 05 card. */
+.project-card:has(img[src*="glove-left.svg"]) {
+  grid-template-columns: minmax(0, 1fr) 230px;
+}
+.project-card:has(img[src*="glove-left.svg"]) > .design-figures {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  gap: 8px;
+}
+.project-card:has(img[src*="glove-left.svg"]) .design-figures figure {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 6px 4px;
+  border-color: rgba(24, 48, 65, 0.18);
+  background: #f3f6f7;
+}
+.project-card:has(img[src*="glove-left.svg"]) .design-figures img {
+  height: 150px;
+  object-fit: contain;
+}
+.project-card:has(img[src*="glove-left.svg"]) .design-figures figcaption {
+  color: #314658;
+}
+
+@media (max-width: 760px) {
+  .project-card:has(img[src*="glove-left.svg"]) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-card:has(img[src*="glove-left.svg"]) > .design-figures {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .project-card:has(img[src*="glove-left.svg"]) .design-figures img {
+    height: 130px;
+  }
+}
