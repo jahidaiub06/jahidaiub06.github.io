@@ -1913,20 +1913,24 @@ body {
 }
 
 
-/* Enlarge the home portrait while keeping its text column balanced. */
+/* Give the home portrait a larger, face-focused crop. */
 .profile-snapshot-top {
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 122px minmax(0, 1fr);
 }
 .snapshot-photo {
-  width: 112px;
-  height: 132px;
+  width: 122px;
+  height: 144px;
+}
+.snapshot-photo img {
+  transform: scale(2);
+  transform-origin: 50% 50%;
 }
 @media (max-width: 760px) {
   .profile-snapshot-top {
-    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-columns: 108px minmax(0, 1fr);
   }
   .snapshot-photo {
-    width: 100px;
-    height: 118px;
+    width: 108px;
+    height: 128px;
   }
 }
