@@ -1923,7 +1923,7 @@ body {
 }
 .snapshot-photo img {
   transform: scale(2);
-  transform-origin: 35% 40%;
+  transform-origin: 35% 52%;
 }
 @media (max-width: 760px) {
   .profile-snapshot-top {
