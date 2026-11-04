@@ -1913,7 +1913,7 @@ body {
 }
 
 
-/* Make the home portrait more prominent with a face-centered crop. */
+/* Show the graduation portrait with a centered, clear face crop. */
 .profile-snapshot-top {
   grid-template-columns: 132px minmax(0, 1fr);
 }
@@ -1922,8 +1922,8 @@ body {
   height: 156px;
 }
 .snapshot-photo img {
-  transform: scale(3);
-  transform-origin: 44% 45%;
+  transform: scale(2);
+  transform-origin: 35% 40%;
 }
 @media (max-width: 760px) {
   .profile-snapshot-top {
