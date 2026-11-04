@@ -1940,26 +1940,24 @@ body {
 .hero::after {
   content: "JAHIDUL ISLAM";
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 4%;
   z-index: 0;
-  max-width: 76%;
   pointer-events: none;
   color: var(--ink);
-  opacity: 0.065;
+  opacity: 0.045;
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  font-size: clamp(4.5rem, 9.5vw, 8rem);
+  font-size: clamp(3.5rem, 7vw, 6.8rem);
   font-weight: 600;
   letter-spacing: -0.045em;
-  line-height: 0.86;
-  white-space: normal;
+  line-height: 0.9;
+  white-space: nowrap;
 }
 
 @media (max-width: 760px) {
   .hero::after {
-    top: 20px;
-    left: 22px;
-    max-width: 88%;
-    font-size: clamp(3.4rem, 15vw, 5.6rem);
+    top: 18px;
+    left: 18px;
+    font-size: clamp(2.4rem, 11vw, 4rem);
   }
 }
