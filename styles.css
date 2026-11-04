@@ -1922,8 +1922,8 @@ body {
   height: 156px;
 }
 .snapshot-photo img {
-  transform: scale(2);
-  transform-origin: 35% 52%;
+  transform: scale(1.65);
+  transform-origin: 35% 62%;
 }
 @media (max-width: 760px) {
   .profile-snapshot-top {
