@@ -116,28 +116,76 @@ if (networkCanvas) {
 
   function drawNetwork(timestamp = 0) {
     networkContext.clearRect(0, 0, networkWidth, networkHeight);
-    for (let i = 0; i < networkPoints.length; i += 1) {
-      const point = networkPoints[i];
+
+    for (const point of networkPoints) {
       point.x = reducedMotion
         ? point.originX
         : point.originX + Math.sin(timestamp * point.speedX + point.phaseX) * point.driftX;
       point.y = reducedMotion
         ? point.originY
         : point.originY + Math.sin(timestamp * point.speedY + point.phaseY) * point.driftY;
+    }
+
+    const drawnLinks = new Set();
+    function drawLink(i, j, opacity) {
+      const key = i < j ? `${i}-${j}` : `${j}-${i}`;
+      if (drawnLinks.has(key)) return;
+      drawnLinks.add(key);
+      networkContext.beginPath();
+      networkContext.moveTo(networkPoints[i].x, networkPoints[i].y);
+      networkContext.lineTo(networkPoints[j].x, networkPoints[j].y);
+      networkContext.strokeStyle = `rgba(95, 205, 224, ${opacity})`;
+      networkContext.lineWidth = 1;
+      networkContext.stroke();
+    }
+
+    // Draw nearby links for a dense local web.
+    for (let i = 0; i < networkPoints.length; i += 1) {
       for (let j = i + 1; j < networkPoints.length; j += 1) {
-        const other = networkPoints[j];
-        const dx = point.x - other.x;
-        const dy = point.y - other.y;
+        const dx = networkPoints[i].x - networkPoints[j].x;
+        const dy = networkPoints[i].y - networkPoints[j].y;
         const distance = Math.hypot(dx, dy);
         if (distance < 190) {
-          networkContext.beginPath();
-          networkContext.moveTo(point.x, point.y);
-          networkContext.lineTo(other.x, other.y);
-          networkContext.strokeStyle = `rgba(95, 205, 224, ${(1 - distance / 190) * 0.28})`;
-          networkContext.lineWidth = 1;
-          networkContext.stroke();
+          drawLink(i, j, (1 - distance / 190) * 0.28);
         }
       }
+    }
+
+    // Add a minimum spanning tree so every point stays connected to the same network.
+    if (networkPoints.length > 1) {
+      const visited = new Uint8Array(networkPoints.length);
+      visited[0] = 1;
+      let visitedCount = 1;
+
+      while (visitedCount < networkPoints.length) {
+        let bestDistance = Infinity;
+        let bestFrom = -1;
+        let bestTo = -1;
+
+        for (let i = 0; i < networkPoints.length; i += 1) {
+          if (!visited[i]) continue;
+          for (let j = 0; j < networkPoints.length; j += 1) {
+            if (visited[j]) continue;
+            const dx = networkPoints[i].x - networkPoints[j].x;
+            const dy = networkPoints[i].y - networkPoints[j].y;
+            const distance = Math.hypot(dx, dy);
+            if (distance < bestDistance) {
+              bestDistance = distance;
+              bestFrom = i;
+              bestTo = j;
+            }
+          }
+        }
+
+        if (bestFrom < 0 || bestTo < 0) break;
+        const opacity = Math.max(0.075, 0.2 * (1 - Math.min(bestDistance / 500, 1)));
+        drawLink(bestFrom, bestTo, opacity);
+        visited[bestTo] = 1;
+        visitedCount += 1;
+      }
+    }
+
+    for (const point of networkPoints) {
       networkContext.beginPath();
       networkContext.arc(point.x, point.y, point.warm ? 7.5 : 5.8, 0, Math.PI * 2);
       networkContext.fillStyle = point.warm ? "rgba(244, 190, 91, 0.82)" : "rgba(103, 222, 216, 0.82)";
@@ -145,6 +193,7 @@ if (networkCanvas) {
       networkContext.shadowBlur = point.warm ? 38 : 30;
       networkContext.fill();
     }
+
     networkContext.shadowBlur = 0;
     if (!reducedMotion) networkFrame = window.requestAnimationFrame(drawNetwork);
   }
